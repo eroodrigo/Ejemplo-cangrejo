@@ -26,9 +26,9 @@ public class cangrejo extends Actor
             
             turn(-3);
         }
-        if(isTouching(Worm.class)
+        if(isTouching(gusano.class))
         {
-         removeTocuching(Worm.class);   
+         removeTouching(gusano.class);   
         }
   
     }    

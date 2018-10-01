@@ -16,8 +16,9 @@ public class MyWorld extends greenfoot.World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(500, 600
+        super(560, 600
         , 1); 
+        
         prepare();
     }
 

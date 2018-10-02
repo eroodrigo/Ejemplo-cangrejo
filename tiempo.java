@@ -18,7 +18,7 @@ public class tiempo extends Actor
     {
         
      timer= new SimpleTimer();
-     contador= new Counter ("tiempo");
+     contador= new Counter ("tiempo:");
      contador.setValue(30);
    
     }

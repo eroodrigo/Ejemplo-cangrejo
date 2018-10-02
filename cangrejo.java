@@ -7,15 +7,25 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class cangrejo extends Actor
-{
-    /**
-     * Act - do whatever the cangrejo wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+{  private Counter contador;
+    
+    
+    public cangrejo()
+    {
+        
+        contador= new Counter ("Vidas:");
+     contador.setValue(5);
+        
+        
+    }
+    
+    
+    
     public void act() 
     {
         // Add your action code here.
         super.move(4);
+       
         if(Greenfoot.isKeyDown("right"))
         {
             
@@ -26,6 +36,7 @@ public class cangrejo extends Actor
             
             turn(-3);
         }
+        
         if(isTouching(gusano.class))
         {
          removeTouching(gusano.class);   

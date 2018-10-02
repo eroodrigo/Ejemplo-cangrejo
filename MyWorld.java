@@ -1,33 +1,32 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.util.ArrayList;
 
-/**
- * Write a description of class MyWorld here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MyWorld extends greenfoot.World
-{
-
-    /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
+{ private ArrayList<gusano> lista;
+  private int cantidad ;
+    
     public MyWorld()
-    {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(560, 600
-        , 1); 
-        
-        prepare();
+    {    this.cantidad=10;
+       lista=new ArrayList<gusano>();
+        super(560, 60, 1); 
+       prepare();
     }
 
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
+    
+    
+    
+    
+   
     private void prepare()
     {
+         gusano gusano = new gusano();
+          lista.add(gusano);
+        for(int i=0;i<cantidad;i++)
+        {
+            gusano gusano = new gusano();
+            lista.add(gusano);
+        }
+        
         lobster lobster = new lobster();
         addObject(lobster,171,205);
         gusano gusano = new gusano();

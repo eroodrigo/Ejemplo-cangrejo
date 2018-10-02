@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class gusano here.
  * 
@@ -8,12 +8,35 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class gusano extends Actor
 {
-    /**
-     * Act - do whatever the gusano wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+   private int cantidad ;
+   private ArrayList
+   
+   public gusano()
+   {
+       this.cantidad=10;
+       
+       
+       
+    }
+   
+    
+    
+    protected void addedToWorld(World world)
+    {    if(cantidad>0)
+        {
+          cantidad--;
+          world.addObject(, (int)Math.random()*100,(int)Math.random()*100);
+        }
+    }
+    
+    
+    
     public void act() 
-    {
-        // Add your action code here.
-    }    
+     {   if(cantidad>0)
+        {
+        cantidad--;
+          gusano.addObject(cantidad, (int)Math.random()*100,(int)Math.random()*100);
+        }
+        
+      }
 }

@@ -1,32 +1,44 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-import java.util.ArrayList;
+
 
 public class MyWorld extends greenfoot.World
-{ private ArrayList<gusano> lista;
+{ 
   private int cantidad ;
+  private lobster lobster;
+  private cangrejo cangrejo;
     
     public MyWorld()
-    {    this.cantidad=10;
-       lista=new ArrayList<gusano>();
+    {    
+      
         super(560, 60, 1); 
-       prepare();
+       prepare(10);
+        lobster = new lobster();
+        addObject(lobster,171,205);
+        
+         cangrejo = new cangrejo();
+        addObject(cangrejo,201,125);
     }
 
     
-    
+    public lobster accedelangosta()
+    {
+        return lobster;
+    }
     
     
    
-    private void prepare()
+    private void prepare(int cantidad)
     {
-         gusano gusano = new gusano();
-          lista.add(gusano);
+         
         for(int i=0;i<cantidad;i++)
         {
             gusano gusano = new gusano();
-            lista.add(gusano);
+            int x=Greenfoot.getRandomNumber(540)+20;
+            int y=Greenfoot.getRandomNumber(540)+20;
+             addObject(gusano, 60, 20);
+            
         }
-        
+       /* 
         lobster lobster = new lobster();
         addObject(lobster,171,205);
         gusano gusano = new gusano();
@@ -40,6 +52,6 @@ public class MyWorld extends greenfoot.World
         gusano gusano4 = new gusano();
         addObject(gusano4,233,491);
         gusano gusano5 = new gusano();
-        addObject(gusano5,415,453);
+        addObject(gusano5,415,453); */
     }
 }

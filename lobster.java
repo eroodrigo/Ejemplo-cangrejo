@@ -44,9 +44,10 @@ public class lobster extends Actor
                 {
                     
                     contador.setValue(contador.getValue()-1);
+                    setLocation(250,250);
                     removeTouching(cangrejo.class);  
                     
-                    
+                     
                     if(contador.getValue()==0)
                     {
                         Greenfoot.stop();   

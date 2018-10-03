@@ -1,11 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
-/**
- * Write a description of class lobster here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
+import greenfoot.*; 
 public class lobster extends Actor
 {
     
@@ -40,12 +33,12 @@ public class lobster extends Actor
                  turn(Greenfoot.getRandomNumber(180)-90);        
                  pasos=0;
                 }
-                if(isTouching(cangrejo.class))
-                {
+               /* if(isTouching(cangrejo.class))
+               {
                     
-                    contador.setValue(contador.getValue()-1);
-                    setLocation(250,250);
-                    removeTouching(cangrejo.class);  
+                   // contador.setValue(contador.getValue()-1);
+                    setLocation(500,500);
+                   // removeTouching(cangrejo.class);  
                     
                      
                     if(contador.getValue()==0)
@@ -53,6 +46,6 @@ public class lobster extends Actor
                         Greenfoot.stop();   
                     }
                     
-                }
+                } */
           }    
 }

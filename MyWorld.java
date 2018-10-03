@@ -10,13 +10,13 @@ public class MyWorld extends greenfoot.World
     public MyWorld()
     {    
       
-        super(560, 60, 1); 
+        super(600, 600, 1); 
        prepare(10);
         lobster = new lobster();
-        addObject(lobster,171,205);
-        
+        addObject(lobster,500,500);
+        cantidad=10;
          cangrejo = new cangrejo();
-        addObject(cangrejo,201,125);
+        addObject(cangrejo,0,0);
     }
 
     
@@ -35,7 +35,7 @@ public class MyWorld extends greenfoot.World
             gusano gusano = new gusano();
             int x=Greenfoot.getRandomNumber(540)+20;
             int y=Greenfoot.getRandomNumber(540)+20;
-             addObject(gusano, 60, 20);
+             addObject(gusano, x, y);
             
         }
        /* 

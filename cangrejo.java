@@ -13,7 +13,11 @@ public class cangrejo extends Actor
         
         
     }
-    
+     protected void addedToWorld(World world)
+    {
+          world.addObject(contador, 500, 80);
+          
+    }
     
     
     public void act() 
@@ -36,6 +40,21 @@ public class cangrejo extends Actor
         {
          removeTouching(gusano.class);   
         }
-  
+         if(isTouching(lobster.class))
+         {
+             setLocation(0,0);
+              
+                    contador.setValue(contador.getValue()-1);
+                   
+                   // removeTouching(cangrejo.class);  
+                    
+                     
+                    if(contador.getValue()==0)
+                    {
+                        Greenfoot.stop();   
+                    }
+             
+             
+            }
     }    
 }

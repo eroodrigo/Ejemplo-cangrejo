@@ -48,7 +48,8 @@ public class cangrejo extends Actor
                     //getWorld().showText("perdiste una vida",200,200);
                    // removeTouching(cangrejo.class);  
                     getWorld().addObject(perdiste,250,250);
-                     
+                    Greenfoot.delay(50);
+                     getWorld().removeObject(perdiste);
                     if(contador.getValue()==0)
                     {
                         Greenfoot.stop();  

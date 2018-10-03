@@ -6,7 +6,7 @@ public class MyWorld extends greenfoot.World
   private int cantidad ;
   private lobster lobster;
   private cangrejo cangrejo;
-    
+    private GreenfootSound musica;
     public MyWorld()
     {    
       
@@ -17,8 +17,23 @@ public class MyWorld extends greenfoot.World
         cantidad=10;
          cangrejo = new cangrejo();
         addObject(cangrejo,0,0);
+        musica=new GreenfootSound("ufo-t-balt.mp3");
+        
+        
     }
 
+    public void started()
+    {
+       // Greenfoot.playSound("ufo-t-balt.mp3");
+       musica.playLoop();
+    }
+    
+    
+    public void stopped()
+    {
+       musica.pause();
+        // Greenfoot.playSound("ufo-t-balt.mp3");
+    }
     
     public lobster accedelangosta()
     {
@@ -54,4 +69,7 @@ public class MyWorld extends greenfoot.World
         gusano gusano5 = new gusano();
         addObject(gusano5,415,453); */
     }
+    
+    
+    
 }

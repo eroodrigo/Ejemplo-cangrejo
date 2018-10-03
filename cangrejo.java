@@ -41,17 +41,18 @@ public class cangrejo extends Actor
          removeTouching(gusano.class);   
         }
          if(isTouching(lobster.class))
-         {
+         { Label perdiste= new Label("persiste una vida",30);
              setLocation(0,0);
               
                     contador.setValue(contador.getValue()-1);
-                   
+                    //getWorld().showText("perdiste una vida",200,200);
                    // removeTouching(cangrejo.class);  
-                    
+                    getWorld().addObject(perdiste,250,250);
                      
                     if(contador.getValue()==0)
                     {
-                        Greenfoot.stop();   
+                        Greenfoot.stop();  
+                       
                     }
              
              
